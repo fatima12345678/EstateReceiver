@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+<div class="sl-mainpanel">
+    <nav class="breadcrumb sl-breadcrumb">
+        <a class="breadcrumb-item" href="index.html">Message</a>
+        <span class="breadcrumb-item active">View Section</span>
+    </nav>
+
+    <div class="sl-pagebody">
+
+        <div class="card pd-20 pd-sm-40">
+            <h6 class="card-body-title">Message Details</h6>
+
+            <div class="form-layout">
+
+
+
+
+
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-control-label">Message Email: <span class="tx-danger">*</span></label><br>
+
+                            <strong th:text="${message.getEmail()}"> </strong>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-control-label">Content: <span class="tx-danger">*</span></label><br>
+                            <strong th:text="${message.getContent()}"  ></strong>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-control-label">Date : </label><br>
+                            <strong th:text="${message.getDate()}"  > </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- row -->
+
+
+
+
+
+            </div><!-- form-layout -->
+
+        </div><!-- card -->
+
+    </div><!-- card -->
+</div>
+
+
+</body>
+</html>
